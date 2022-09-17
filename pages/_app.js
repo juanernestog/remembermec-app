@@ -1,5 +1,6 @@
 import 'react-bootstrap';
 import '../styles/globals.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect } from 'react';
 import Layout from '../components/Layout';
 

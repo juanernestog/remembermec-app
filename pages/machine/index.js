@@ -22,81 +22,83 @@ export default function Machine() {
   return (
     <>
       <div>
-        <h1>Añade una nueva maquina</h1>
-        <Formik
-          initialValues={{
-            reference: '',
-            brand: '',
-            model: '',
-            description: '',
-            numberPlate: '',
-          }}
-          onSubmit={(values, { setSubmitting }) => {
-            setTimeout(() => {
-              alert(JSON.stringify(values, null, 2));
-              setSubmitting(false);
-            }, 400);
-            console.log(JSON.stringify(values, null, 2));
-          }}
-        >
-          {({
-            values,
-            errors,
-            touched,
-            handleChange,
-            handleBlur,
-            handleSubmit,
-            isSubmitting,
-            /* and other goodies */
-          }) => (
-            <form onSubmit={handleSubmit} className="flex">
-              <title>Create new Machine</title>
-              <label htmlFor="createMachine">reference</label>
-              <input
-                type="text"
-                name="reference"
-                onChange={handleChange}
-                onBlur={handleBlur}
-                value={values.email}
-              />
-              <label htmlFor="">Marca</label>
-              <input
-                type="text"
-                name="brand"
-                onChange={handleChange}
-                onBlur={handleBlur}
-                value={values.email}
-              />
-              <label htmlFor="name"> Año del modelo </label>
-              <input
-                type="text"
-                name="model"
-                onChange={handleChange}
-                onBlur={handleBlur}
-                value={values.email}
-              />
-              <label htmlFor="name">Descrpcion</label>
-              <input
-                type="text-area"
-                name="description"
-                onChange={handleChange}
-                onBlur={handleBlur}
-                value={values.password}
-              />
-              <label htmlFor="name">Placa</label>
-              <input
-                type="text"
-                name="numberPlate"
-                onChange={handleChange}
-                onBlur={handleBlur}
-                value={values.password}
-              />
-              <button type="submit" disabled={isSubmitting}>
-                Submit
-              </button>
-            </form>
-          )}
-        </Formik>
+        <Card>
+          <Card.Title>Añade una nueva maquina</Card.Title>
+          <Formik
+            initialValues={{
+              reference: '',
+              brand: '',
+              model: '',
+              description: '',
+              numberPlate: '',
+            }}
+            onSubmit={(values, { setSubmitting }) => {
+              setTimeout(() => {
+                alert(JSON.stringify(values, null, 2));
+                setSubmitting(false);
+              }, 400);
+              console.log(JSON.stringify(values, null, 2));
+            }}
+          >
+            {({
+              values,
+              errors,
+              touched,
+              handleChange,
+              handleBlur,
+              handleSubmit,
+              isSubmitting,
+              /* and other goodies */
+            }) => (
+              <form onSubmit={handleSubmit} className="flex">
+                <title>Create new Machine</title>
+                <label htmlFor="createMachine">reference</label>
+                <field
+                  type="text"
+                  name="reference"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.email}
+                />
+                <label htmlFor="">Marca</label>
+                <input
+                  type="text"
+                  name="brand"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.email}
+                />
+                <label htmlFor="name"> Año del modelo </label>
+                <input
+                  type="text"
+                  name="model"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.email}
+                />
+                <label htmlFor="name">Descrpcion</label>
+                <input
+                  type="text-area"
+                  name="description"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.password}
+                />
+                <label htmlFor="name">Placa</label>
+                <input
+                  type="text"
+                  name="numberPlate"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.password}
+                />
+                <button type="submit" disabled={isSubmitting}>
+                  Submit
+                </button>
+              </form>
+            )}
+          </Formik>
+        </Card>
       </div>
       <style></style>
     </>

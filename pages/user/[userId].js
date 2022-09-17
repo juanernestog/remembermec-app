@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router';
+import { Card, Col, Row, Container } from 'react-bootstrap';
 
 export default function users({ dataUser, dataMachine }) {
   // const router = useRouter();
@@ -7,12 +8,32 @@ export default function users({ dataUser, dataMachine }) {
 
   return (
     <>
-      <h1>Users</h1>
-      <p>Hello {dataUser.data.name}!</p>
-      <h1> Tus maquinas</h1>
-      {dataMachine.data.map((machine) => {
-        return <h1 key={machine._id}> {machine.reference}</h1>;
-      })}
+      <Container>
+        <Row>
+          <Col>
+            <div
+              className="w-100 p-5 m-5"
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                position: 'relative',
+              }}
+            >
+              <Card classname="w-40 m-5 p-3">
+                <Card.Title>Users</Card.Title>
+                <div classname="card-body">
+                  <Card.Subtitle>Hello {dataUser.data.name}!</Card.Subtitle>
+                  <Card.Subtitle> Tus maquinas</Card.Subtitle>
+                  {dataMachine.data.map((machine) => {
+                    return <p key={machine._id}> {machine.reference}</p>;
+                  })}
+                </div>
+              </Card>
+            </div>
+          </Col>
+        </Row>
+      </Container>
     </>
   );
 }
