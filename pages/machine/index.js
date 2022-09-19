@@ -58,7 +58,7 @@ export default function Machine() {
                   name="reference"
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  value={values.email}
+                  value={values.reference}
                 />
                 <label htmlFor="">Marca</label>
                 <input
@@ -66,7 +66,7 @@ export default function Machine() {
                   name="brand"
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  value={values.email}
+                  value={values.brand}
                 />
                 <label htmlFor="name"> Año del modelo </label>
                 <input
@@ -74,7 +74,7 @@ export default function Machine() {
                   name="model"
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  value={values.email}
+                  value={values.model}
                 />
                 <label htmlFor="name">Descrpcion</label>
                 <input
@@ -82,7 +82,7 @@ export default function Machine() {
                   name="description"
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  value={values.password}
+                  value={values.description}
                 />
                 <label htmlFor="name">Placa</label>
                 <input
@@ -90,7 +90,7 @@ export default function Machine() {
                   name="numberPlate"
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  value={values.password}
+                  value={values.numberPlate}
                 />
                 <button type="submit" disabled={isSubmitting}>
                   Submit
