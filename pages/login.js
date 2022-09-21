@@ -16,7 +16,8 @@ export default function Machine() {
       })
       .then(function (response) {
         localStorage.setItem('token', response.data.meta.token);
-        // router.push('/');
+        alert('Login exitoso');
+        router.push('/');
       })
       .catch(function (error) {
         console.log(error);
