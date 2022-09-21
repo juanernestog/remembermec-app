@@ -2,8 +2,16 @@ import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import Router from 'next/router';
+import { useState, useEffect } from 'react';
 
 export default function Home() {
+  const [token, setToken] = useState(null);
+
+  useEffect(() => {
+    setToken(localStorage.getItem('token'));
+  }, []);
+  console.log(token, '1');
+
   return (
     <div className={styles.container}>
       <Head>
@@ -12,9 +20,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      {/* {token && <p>prueba</p>} */}
+
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Biembenido a <a href="/">RememberMec</a>
+          Bienvenido a <a href="/">RememberMec</a>
         </h1>
 
         <p className={styles.description}>
