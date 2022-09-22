@@ -4,7 +4,7 @@ import { Card, Col, Row, Container } from 'react-bootstrap';
 export default function users({ dataUser, dataMachine }) {
   // const router = useRouter();
   // const { userId } = router.query;
-  console.log(dataMachine);
+  // console.log(dataMachine);
 
   return (
     <>
